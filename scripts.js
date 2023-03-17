@@ -54,21 +54,21 @@ let americanPrice = 0;
 let continentalPrice = 0;
 let towerPrice = 0;
 
-//Majority and Minority
-let worldwideMajority = 0;
-let sacksonMajority = 0;
-let festivalMajority = 0;
-let imperialMajority = 0;
-let americanMajority = 0;
-let continentalMajority = 0;
-let towerMajority = 0;
-let worldwideMinority = 0;
-let sacksonMinority = 0;
-let festivalMinority = 0;
-let imperialMinority = 0;
-let americanMinority = 0;
-let continentalMinority = 0;
-let towerMinority = 0;
+//Maj and Min
+let worldwideMaj = 0;
+let sacksonMaj = 0;
+let festivalMaj = 0;
+let imperialMaj = 0;
+let americanMaj = 0;
+let continentalMaj = 0;
+let towerMaj = 0;
+let worldwideMin = 0;
+let sacksonMin = 0;
+let festivalMin = 0;
+let imperialMin = 0;
+let americanMin = 0;
+let continentalMin = 0;
+let towerMin = 0;
 
 //Player Stocks
 let wStock = 0;
@@ -266,21 +266,21 @@ function totalValue() {
 }
 
 //innerHTML
-worldwide.innerHTML = `Worldwide Tiles: ${worldwideTiles} Price: ${worldwidePrice} Majority: ${worldwideMajority} Minority: ${worldwideMinority}`;
-sackson.innerHTML = `Sackson Tiles: ${sacksonTiles} Price: ${sacksonPrice} Majority: ${sacksonMajority} Minority: ${sacksonMinority}`;
-festival.innerHTML = `Festival Tiles: ${festivalTiles} Price: ${festivalPrice} Majority: ${festivalMajority} Minority: ${festivalMinority}`;
-imperial.innerHTML = `Imperial Tiles: ${imperialTiles} Price: ${imperialPrice} Majority: ${imperialMajority} Minority: ${imperialMinority}`;
-american.innerHTML = `American Tiles: ${americanTiles} Price: ${americanPrice} Majority: ${americanMajority} Minority: ${americanMinority}`;
-continental.innerHTML = `Continental Tiles: ${continentalTiles} Price: ${continentalPrice} Majority: ${continentalMajority} Minority: ${continentalMinority}`;
-tower.innerHTML = `Tower Tiles: ${towerTiles} Price: ${towerPrice} Majority: ${towerMajority} Minority: ${towerMinority}`;
+worldwide.innerHTML = `Tiles: ${worldwideTiles} $: ${worldwidePrice} Maj: ${worldwideMaj} Min: ${worldwideMin}`;
+sackson.innerHTML = `Tiles: ${sacksonTiles} $: ${sacksonPrice} Maj: ${sacksonMaj} Min: ${sacksonMin}`;
+festival.innerHTML = `Tiles: ${festivalTiles} $: ${festivalPrice} Maj: ${festivalMaj} Min: ${festivalMin}`;
+imperial.innerHTML = `Tiles: ${imperialTiles} $: ${imperialPrice} Maj: ${imperialMaj} Min: ${imperialMin}`;
+american.innerHTML = `Tiles: ${americanTiles} $: ${americanPrice} Maj: ${americanMaj} Min: ${americanMin}`;
+continental.innerHTML = `Tiles: ${continentalTiles} $: ${continentalPrice} Maj: ${continentalMaj} Min: ${continentalMin}`;
+tower.innerHTML = `Tiles: ${towerTiles} $: ${towerPrice} Maj: ${towerMaj} Min: ${towerMin}`;
 
 let worldwideAdd = document.getElementById('worldwide-add');
 worldwideAdd.addEventListener('click', () => {
     worldwideTiles += 1;
     updatePrice();
-    worldwideMajority = worldwidePrice * 10;
-    worldwideMinority = worldwideMajority / 2;
-    worldwide.innerHTML = `Worldwide Tiles: ${worldwideTiles} Price: ${worldwidePrice} Majority: ${worldwideMajority} Minority: ${worldwideMinority}`;    wValue = wStock * worldwidePrice;
+    worldwideMaj = worldwidePrice * 10;
+    worldwideMin = worldwideMaj / 2;
+    worldwide.innerHTML = `Tiles: ${worldwideTiles} $: ${worldwidePrice} Maj: ${worldwideMaj} Min: ${worldwideMin}`;    wValue = wStock * worldwidePrice;
     w.innerHTML = `Owned: ${wStock} Total Value: ${wValue}`;
     totalValue();
 });
@@ -289,9 +289,9 @@ let worldwideSubtract = document.getElementById('worldwide-subtract');
 worldwideSubtract.addEventListener('click', () => {
     worldwideTiles -= 1;
     updatePrice();
-    worldwideMajority = worldwidePrice * 10;
-    worldwideMinority = worldwideMajority / 2;
-    worldwide.innerHTML = `Worldwide Tiles: ${worldwideTiles} Price: ${worldwidePrice} Majority: ${worldwideMajority} Minority: ${worldwideMinority}`;
+    worldwideMaj = worldwidePrice * 10;
+    worldwideMin = worldwideMaj / 2;
+    worldwide.innerHTML = `Tiles: ${worldwideTiles} $: ${worldwidePrice} Maj: ${worldwideMaj} Min: ${worldwideMin}`;
     wValue = wStock * worldwidePrice;
     w.innerHTML = `Owned: ${wStock} Total Value: ${wValue}`;
     totalValue();
@@ -301,9 +301,9 @@ let festivalAdd = document.getElementById('festival-add');
 festivalAdd.addEventListener('click', () => {
     festivalTiles += 1;
     updatePrice();
-    festivalMajority = festivalPrice * 10;
-    festivalMinority = festivalMajority / 2;
-    festival.innerHTML = `Festival Tiles: ${festivalTiles} Price: ${festivalPrice} Majority: ${festivalMajority} Minority: ${festivalMinority}`;
+    festivalMaj = festivalPrice * 10;
+    festivalMin = festivalMaj / 2;
+    festival.innerHTML = `Tiles: ${festivalTiles} $: ${festivalPrice} Maj: ${festivalMaj} Min: ${festivalMin}`;
     fValue = fStock * festivalPrice;
     f.innerHTML = `Owned: ${fStock} Total Value: ${fValue}`;
     totalValue();
@@ -313,9 +313,9 @@ let festivalSubtract = document.getElementById('festival-subtract');
 festivalSubtract.addEventListener('click', () => {
     festivalTiles -= 1;
     updatePrice();
-    festivalMajority = festivalPrice * 10;
-    festivalMinority = festivalMajority / 2;
-    festival.innerHTML = `Festival Tiles: ${festivalTiles} Price: ${festivalPrice} Majority: ${festivalMajority} Minority: ${festivalMinority}`;
+    festivalMaj = festivalPrice * 10;
+    festivalMin = festivalMaj / 2;
+    festival.innerHTML = `Tiles: ${festivalTiles} $: ${festivalPrice} Maj: ${festivalMaj} Min: ${festivalMin}`;
     fValue = fStock * festivalPrice;
     f.innerHTML = `Owned: ${fStock} Total Value: ${fValue}`;
     totalValue();
@@ -325,9 +325,9 @@ let sacksonAdd = document.getElementById('sackson-add');
 sacksonAdd.addEventListener('click', () => {
     sacksonTiles += 1;
     updatePrice();
-    sacksonMajority = sacksonPrice * 10;
-    sacksonMinority = sacksonMajority / 2;
-    sackson.innerHTML = `Sackson Tiles: ${sacksonTiles} Price: ${sacksonPrice} Majority: ${sacksonMajority} Minority: ${sacksonMinority}`;
+    sacksonMaj = sacksonPrice * 10;
+    sacksonMin = sacksonMaj / 2;
+    sackson.innerHTML = `Tiles: ${sacksonTiles} $: ${sacksonPrice} Maj: ${sacksonMaj} Min: ${sacksonMin}`;
     sValue = sStock * sacksonPrice;
     s.innerHTML = `Owned: ${sStock} Total Value: ${sValue}`;
     totalValue();
@@ -337,9 +337,9 @@ let sacksonSubtract = document.getElementById('sackson-subtract');
 sacksonSubtract.addEventListener('click', () => {
     sacksonTiles -= 1;
     updatePrice();
-    sacksonMajority = sacksonPrice * 10;
-    sacksonMinority = sacksonMajority / 2;
-    sackson.innerHTML = `Sackson Tiles: ${sacksonTiles} Price: ${sacksonPrice} Majority: ${sacksonMajority} Minority: ${sacksonMinority}`;
+    sacksonMaj = sacksonPrice * 10;
+    sacksonMin = sacksonMaj / 2;
+    sackson.innerHTML = `Tiles: ${sacksonTiles} $: ${sacksonPrice} Maj: ${sacksonMaj} Min: ${sacksonMin}`;
     sValue = sStock * sacksonPrice;
     s.innerHTML = `Owned: ${sStock} Total Value: ${sValue}`;
     totalValue();
@@ -349,9 +349,9 @@ let imperialAdd = document.getElementById('imperial-add');
 imperialAdd.addEventListener('click', () => {
     imperialTiles += 1;
     updatePrice();
-    imperialMajority = imperialPrice * 10;
-    imperialMinority = imperialMajority / 2;
-    imperial.innerHTML = `Imperial Tiles: ${imperialTiles} Price: ${imperialPrice} Majority: ${imperialMajority} Minority: ${imperialMinority}`;
+    imperialMaj = imperialPrice * 10;
+    imperialMin = imperialMaj / 2;
+    imperial.innerHTML = `Tiles: ${imperialTiles} $: ${imperialPrice} Maj: ${imperialMaj} Min: ${imperialMin}`;
     iValue = iStock * imperialPrice;
     i.innerHTML = `Owned: ${iStock} Total Value: ${iValue}`;
     totalValue();
@@ -361,9 +361,9 @@ let imperialSubtract = document.getElementById('imperial-subtract');
 imperialSubtract.addEventListener('click', () => {
     imperialTiles -= 1;
     updatePrice();
-    imperialMajority = imperialPrice * 10;
-    imperialMinority = imperialMajority / 2;
-    imperial.innerHTML = `Imperial Tiles: ${imperialTiles} Price: ${imperialPrice} Majority: ${imperialMajority} Minority: ${imperialMinority}`;
+    imperialMaj = imperialPrice * 10;
+    imperialMin = imperialMaj / 2;
+    imperial.innerHTML = `Tiles: ${imperialTiles} $: ${imperialPrice} Maj: ${imperialMaj} Min: ${imperialMin}`;
     iValue = iStock * imperialPrice;
     i.innerHTML = `Owned: ${iStock} Total Value: ${iValue}`;
 });
@@ -372,9 +372,9 @@ let americanAdd = document.getElementById('american-add');
 americanAdd.addEventListener('click', () => {
     americanTiles += 1;
     updatePrice();
-    americanMajority = americanPrice * 10;
-    americanMinority = americanMajority / 2;
-    american.innerHTML = `American Tiles: ${americanTiles} Price: ${americanPrice} Majority: ${americanMajority} Minority: ${americanMinority}`;
+    americanMaj = americanPrice * 10;
+    americanMin = americanMaj / 2;
+    american.innerHTML = `Tiles: ${americanTiles} $: ${americanPrice} Maj: ${americanMaj} Min: ${americanMin}`;
     aValue = aStock * americanPrice;
     a.innerHTML = `Owned: ${aStock} Total Value: ${aValue}`;
     totalValue();
@@ -384,9 +384,9 @@ let americanSubtract = document.getElementById('american-subtract');
 americanSubtract.addEventListener('click', () => {
     americanTiles -= 1;
     updatePrice();
-    americanMajority = americanPrice * 10;
-    americanMinority = americanMajority / 2;
-    american.innerHTML = `American Tiles: ${americanTiles} Price: ${americanPrice} Majority: ${americanMajority} Minority: ${americanMinority}`;
+    americanMaj = americanPrice * 10;
+    americanMin = americanMaj / 2;
+    american.innerHTML = `Tiles: ${americanTiles} $: ${americanPrice} Maj: ${americanMaj} Min: ${americanMin}`;
     aValue = aStock * americanPrice;
     a.innerHTML = `Owned: ${aStock} Total Value: ${aValue}`;
     totalValue();
@@ -396,9 +396,9 @@ let continentalAdd = document.getElementById('continental-add');
 continentalAdd.addEventListener('click', () => {
     continentalTiles += 1;
     updatePrice();
-    continentalMajority = continentalPrice * 10;
-    continentalMinority = continentalMajority / 2;
-    continental.innerHTML = `Continental Tiles: ${continentalTiles} Price: ${continentalPrice} Majority: ${continentalMajority} Minority: ${continentalMinority}`;
+    continentalMaj = continentalPrice * 10;
+    continentalMin = continentalMaj / 2;
+    continental.innerHTML = `Tiles: ${continentalTiles} $: ${continentalPrice} Maj: ${continentalMaj} Min: ${continentalMin}`;
     cValue = cStock * continentalPrice;
     c.innerHTML = `Owned: ${cStock} Total Value: ${cValue}`;
     totalValue();
@@ -408,9 +408,9 @@ let continentalSubtract = document.getElementById('continental-subtract');
 continentalSubtract.addEventListener('click', () => {
     continentalTiles -= 1;
     updatePrice();
-    continentalMajority = continentalPrice * 10;
-    continentalMinority = continentalMajority / 2;
-    continental.innerHTML = `Continental Tiles: ${continentalTiles} Price: ${continentalPrice} Majority: ${continentalMajority} Minority: ${continentalMinority}`;
+    continentalMaj = continentalPrice * 10;
+    continentalMin = continentalMaj / 2;
+    continental.innerHTML = `Tiles: ${continentalTiles} $: ${continentalPrice} Maj: ${continentalMaj} Min: ${continentalMin}`;
     cValue = cStock * continentalPrice;
     c.innerHTML = `Owned: ${cStock} Total Value: ${cValue}`;
     totalValue();
@@ -420,9 +420,9 @@ let towerAdd = document.getElementById('tower-add');
 towerAdd.addEventListener('click', () => {
     towerTiles += 1;
     updatePrice();
-    towerMajority = towerPrice * 10;
-    towerMinority = towerMajority / 2;
-    tower.innerHTML = `Tower Tiles: ${towerTiles} Price: ${towerPrice} Majority: ${towerMajority} Minority: ${towerMinority}`;
+    towerMaj = towerPrice * 10;
+    towerMin = towerMaj / 2;
+    tower.innerHTML = `Tiles: ${towerTiles} $: ${towerPrice} Maj: ${towerMaj} Min: ${towerMin}`;
     tValue = tStock * towerPrice;
     t.innerHTML = `Owned: ${tStock} Total Value: ${tValue}`;
     totalValue();
@@ -432,9 +432,9 @@ let towerSubtract = document.getElementById('tower-subtract');
 towerSubtract.addEventListener('click', () => {
     towerTiles -= 1;
     updatePrice();
-    towerMajority = towerPrice * 10;
-    towerMinority = towerMajority / 2;
-    tower.innerHTML = `Tower Tiles: ${towerTiles} Price: ${towerPrice} Majority: ${towerMajority} Minority: ${towerMinority}`;
+    towerMaj = towerPrice * 10;
+    towerMin = towerMaj / 2;
+    tower.innerHTML = `Tiles: ${towerTiles} $: ${towerPrice} Maj: ${towerMaj} Min: ${towerMin}`;
     tValue = tStock * towerPrice;
     t.innerHTML = `Owned: ${tStock} Total Value: ${tValue}`;
     totalValue();
