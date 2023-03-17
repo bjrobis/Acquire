@@ -528,7 +528,7 @@ cAdd.addEventListener('click', () => {
 
 cSubtract.addEventListener('click', () => {
     cStock -= 1;
-    cValue = aStock * continentalPrice;
+    cValue = cStock * continentalPrice;
     c.innerHTML = `Owned: ${cStock} Total Value: ${cValue}`;
     totalValue();
 });
